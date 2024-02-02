@@ -1,0 +1,7 @@
+
+Spring + Maven Project Parent Child 구조로 만들기 (Multi-Module Project)
+출처: https://oingdaddy.tistory.com/298 [SI Supply Depot:티스토리]
+
+Maven을 이용한 스프링부트 Multi Module 프로젝트(2/3)-프로젝트 만들기
+https://codegear.tistory.com/22
+
