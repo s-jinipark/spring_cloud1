@@ -5,3 +5,26 @@ Spring + Maven Project Parent Child 구조로 만들기 (Multi-Module Project)
 Maven을 이용한 스프링부트 Multi Module 프로젝트(2/3)-프로젝트 만들기
 https://codegear.tistory.com/22
 
+==================================================
+
+tag 
+v0.1  discoveryservice
+v0.2  user-service0
+
+
+	jini@DESKTOP-GKSI0P5 MINGW64 /C/Users/jini/git/spring_cloud1 (main)
+	$ git tag  v0.2 -m  "user-service0"
+	
+	jini@DESKTOP-GKSI0P5 MINGW64 /C/Users/jini/git/spring_cloud1 (main)
+	$ git tag
+	v0.1
+	v0.2
+	
+	jini@DESKTOP-GKSI0P5 MINGW64 /C/Users/jini/git/spring_cloud1 (main)
+	$ git push origin v0.2
+	Enumerating objects: 1, done.
+	Counting objects: 100% (1/1), done.
+	Writing objects: 100% (1/1), 163 bytes | 81.00 KiB/s, done.
+	Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+	To https://github.com/s-jinipark/spring_cloud1.git
+	 * [new tag]         v0.2 -> v0.2

@@ -1,12 +1,16 @@
 
 server:
-  port: 9001
-
+  port: 0  # 두개 띄웠을 때 구분이 안 간다. 
+  #port: 9001
+  #구분 위해 아래 eureka.instance.instance-id 셋탱해주고..  기동 시 넣어 놓았던 -Dserver.port=9002 설정 제거
+  
 spring:
   application:
     name: user-service0
 
 eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
   client:
     register-with-eureka: true
     fetch-registry: true
