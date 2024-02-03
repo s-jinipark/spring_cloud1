@@ -24,6 +24,7 @@
 	<!-- module 추가  -->  
 	<modules>        
 		<module>discoveryservice</module>
+		<module>user-service0</module>
 	</modules>
 
 	<!-- dependencies 삭제 
