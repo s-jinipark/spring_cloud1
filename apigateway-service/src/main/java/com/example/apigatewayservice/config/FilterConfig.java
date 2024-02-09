@@ -5,10 +5,10 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class FilterConfig {
 
-	@Bean
+	//@Bean  // 주석 처리하면 구현하지 않은 것과 동일
 	public RouteLocator getewayRoutes(RouteLocatorBuilder builder) {
 		return builder.routes() // yaml 파일 대신 여기(java class) 에서
 				.route(r -> r.path("/first-service/**") // 요청이 들어오면 아래 uri 로 이동
