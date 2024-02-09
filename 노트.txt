@@ -28,3 +28,27 @@ v0.3	user-service0 port0
 	Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 	To https://github.com/s-jinipark/spring_cloud1.git
 	 * [new tag]         v0.2 -> v0.2
+
+
+$ git tag  v0.4 -m  "apigateway-service"
+
+----------------------------------------
+
+[참조] 업데이트된 소스 확인
+
+	jini@DESKTOP-GKSI0P5 MINGW64 ~/git/toy-msa (main)
+	$ git branch -r
+	  origin/HEAD -> origin/main
+	  origin/hateoas
+	  origin/kafka
+	  origin/main
+	  origin/master
+	  origin/springboot3.2
+	  origin/springboot3.2_nokafka
+	
+	jini@DESKTOP-GKSI0P5 MINGW64 ~/git/toy-msa (main)
+	$ git checkout -t origin/springboot3.2
+	Switched to a new branch 'springboot3.2'
+	branch 'springboot3.2' set up to track 'origin/springboot3.2'.
+
+----------------------------------------
