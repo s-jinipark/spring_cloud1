@@ -24,7 +24,12 @@
 	<!-- module 추가  -->  
 	<modules>        
 		<module>discoveryservice</module>
+		<!-- 
 		<module>user-service0</module>
+		 -->
+		<module>my-first-service</module>
+		<module>my-second-service</module>
+		<module>apigateway-service</module>
 	</modules>
 
 	<!-- dependencies 삭제 

@@ -8,9 +8,9 @@ https://codegear.tistory.com/22
 ==================================================
 
 tag 
-v0.1  discoveryservice
-v0.2  user-service0
-
+v0.1	discoveryservice
+v0.2	user-service0
+v0.3	user-service0 port0
 
 	jini@DESKTOP-GKSI0P5 MINGW64 /C/Users/jini/git/spring_cloud1 (main)
 	$ git tag  v0.2 -m  "user-service0"
