@@ -34,6 +34,8 @@ $ git tag  v0.4 -m  "apigateway-service"
 
 ----------------------------------------
 
+https://github.com/joneconsulting/toy-msa/tree/springboot3.2
+
 [참조] 업데이트된 소스 확인
 
 	jini@DESKTOP-GKSI0P5 MINGW64 ~/git/toy-msa (main)
@@ -55,16 +57,34 @@ $ git tag  v0.4 -m  "apigateway-service"
 
 $ git tag  v0.5 -m  "apigateway-service filter(java)"
 
-
 $ git tag  v0.6 -m  "apigateway-service filter(yml)"
-
 
 $ git tag  v0.7 -m  "apigateway-service filter(custom)"
 
-
 $ git tag  v0.8 -m  "apigateway-service filter(global)"
 
-
 $ git tag  v0.9 -m  "apigateway-service filter(logging)"
+
+tag 한꺼번에 로컬에 올림
+    jini@DESKTOP-GKSI0P5 MINGW64 /C/users/jini/git/spring_cloud1 (main)
+    $ git push origin --tag
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (7/7), done.
+    Writing objects: 100% (7/7), 1.01 KiB | 129.00 KiB/s, done.
+    Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+    To https://github.com/s-jinipark/spring_cloud1.git
+     * [new tag]         v0.10 -> v0.10
+     * [new tag]         v0.4 -> v0.4
+     * [new tag]         v0.5 -> v0.5
+     * [new tag]         v0.6 -> v0.6
+     * [new tag]         v0.7 -> v0.7
+     * [new tag]         v0.8 -> v0.8
+     * [new tag]         v0.9 -> v0.9
+
+참조 : https://dev-coco.tistory.com/51 [슬기로운 개발생활:티스토리]
+
+https://minsone.github.io/git/git-addtion-and-modified-delete-tag
 
 
