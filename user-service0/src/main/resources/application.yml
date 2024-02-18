@@ -6,7 +6,7 @@ server:
   
 spring:
   application:
-    name: user-service0
+    name: user-service    # [5-1] ->  #name: user-service0
   h2:
     console:
       enabled: true
