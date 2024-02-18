@@ -93,3 +93,8 @@ $ git tag  v4.1 -m  "user-service (welcome)"
 
 $ git tag  v4.2 -m  "user-service (h2 db)"
 
+
+$ git tag  v4.3 -m "user-service (user create & jpa)"
+
+$ git tag  v4.4 -m "user-service (Spring Security)"
+
