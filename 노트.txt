@@ -97,3 +97,9 @@ $ git tag  v4.3 -m "user-service (user create & jpa)"
 
 $ git tag  v4.4 -m "user-service (Spring Security)"
 
+
+Users Microservice와 Spring Cloud Gateway 연동
+$ git tag  v5.1 -m "user-service (Spring Cloud Gateway)"
+
+Users Microservice - 사용자 조회
+$ git tag  v5.2 -m "user-service (getUserBy ...)"
