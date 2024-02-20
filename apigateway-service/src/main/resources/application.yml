@@ -24,6 +24,10 @@ spring:
           uri: lb://USER-SERVICE  # 유레카에 등록된 명
           predicates:
             - Path=/user-service/**
+        - id: catalog-service  # [5-5] ? 정도
+          uri: lb://CATALOG-SERVICE  # 유레카에 등록된 명
+          predicates:
+            - Path=/catalog-service/**
         - id: first-service
           #uri: http://localhost:8081/
           uri: lb://FIRST-SERVICE  # 유레카에 등록된 명
