@@ -3,6 +3,8 @@ package com.example.userservice.security;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -29,6 +31,13 @@ public class WebSecurity {
     @Bean
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
 
+        // Configure AuthenticationManagerBuilder
+        AuthenticationManagerBuilder authenticationManagerBuilder =
+                http.getSharedObject(AuthenticationManagerBuilder.class);
+        authenticationManagerBuilder.userDetailsService(userService).passwordEncoder(bCryptPasswordEncoder);
+        
+    	AuthenticationManager authenticationManager = authenticationManagerBuilder.build();
+    	
         http.csrf( (csrf) -> csrf.disable());
 //        http.csrf(AbstractHttpConfigurer::disable);
 
@@ -39,10 +48,17 @@ public class WebSecurity {
                         //.requestMatchers(new AntPathRequestMatcher("/users", "POST")).permitAll()
                         //.requestMatchers(new AntPathRequestMatcher("/health_check/**")).permitAll()
                         .anyRequest().authenticated()
-                );
+                //);  // authenticationManager 여기 붙임
+                ).authenticationManager(authenticationManager);
+
+        http.addFilter(getAuthenticationFilter(authenticationManager));
 
         http.headers((headers) -> headers.frameOptions((frameOptions) -> frameOptions.sameOrigin()));
 
         return http.build();
+    }
+    
+    private AuthenticationFilter getAuthenticationFilter(AuthenticationManager authenticationManager) throws Exception {
+        return new AuthenticationFilter(authenticationManager, userService, env);
     }
 }

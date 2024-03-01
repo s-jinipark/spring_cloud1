@@ -25,7 +25,8 @@ import com.example.userservice.vo.ResponseUser;
 
 @RestController
 //@RequestMapping("/")   // [5-2]
-@RequestMapping("/user-service/")
+//@RequestMapping("/user-service/") // [section 6]
+@RequestMapping("/")   // [section 6] 에서 다시 뺌 .. apigateway 에서 rewrite ...
 public class UserController {
 
 	//[1]

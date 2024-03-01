@@ -20,10 +20,35 @@ spring:
             preLogger: true
             postLogger: true
       routes:
-        - id: user-service  # [5-1]
+#        - id: user-service  # [5-1]
+#          uri: lb://USER-SERVICE  # 유레카에 등록된 명
+#          predicates:
+#            - Path=/user-service/**
+        # [section 6] 3가지로 구분해서 ... rewrite 하므로 controller 에 requestMapping 에 /user-service 를 안써도 됨
+        - id: user-service 
           uri: lb://USER-SERVICE  # 유레카에 등록된 명
           predicates:
+            - Path=/user-service/login
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment} 
+        - id: user-service 
+          uri: lb://USER-SERVICE  
+          predicates:
+            - Path=/user-service/users
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service 
+          uri: lb://USER-SERVICE  
+          predicates:
             - Path=/user-service/**
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}            
         - id: catalog-service  # [5-5] ? 정도
           uri: lb://CATALOG-SERVICE  # 유레카에 등록된 명
           predicates:
