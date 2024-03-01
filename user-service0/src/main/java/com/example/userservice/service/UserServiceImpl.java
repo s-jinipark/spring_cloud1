@@ -115,7 +115,16 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto getUserDetailsByEmail(String userName) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		UserEntity userEntity = userRepository.findByEmail(userName);
+        if (userEntity == null)
+            throw new UsernameNotFoundException(userName);
+
+        ModelMapper mapper = new ModelMapper();
+        mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+
+        UserDto userDto = mapper.map(userEntity, UserDto.class);
+        return userDto;
 	}
 
 }

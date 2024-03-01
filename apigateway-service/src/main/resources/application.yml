@@ -28,7 +28,7 @@ spring:
         - id: user-service 
           uri: lb://USER-SERVICE  # 유레카에 등록된 명
           predicates:
-            - Path=/user-service/login
+            - Path=/user-service/login   # spring security 에서 제공
             - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
