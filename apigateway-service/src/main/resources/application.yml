@@ -48,7 +48,8 @@ spring:
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}            
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}   
+            - AuthorizationHeaderFilter    # section 6 추가     
         - id: catalog-service  # [5-5] ? 정도
           uri: lb://CATALOG-SERVICE  # 유레카에 등록된 명
           predicates:
@@ -81,3 +82,8 @@ spring:
                 baseMessge: Hi there. Logging
                 preLogger: true
                 postLogger: true
+
+token:  # section 6
+  #expiration_time: 86400000  # 60초 * 60분 * 24 시간 * 1000 (ms)
+  secret: mynameisjiniparkiliveinyonginsin
+  

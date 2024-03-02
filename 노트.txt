@@ -113,14 +113,18 @@ $ git tag  v5.4 -m "user-service (Orders Service)"
 ----------------------------------------
 [section 6]
 Users Microservice - AuthenticationFilter 추가
-부터 
+  부터 
 Users Microservice - Routes 테스트
-까지
+  까지
 
 Users Microservice - Authentication
 $ git tag  v6.1 -m "user-service (Authentication)"
 
-
 Users Microservice - JWT
 $ git tag  v6.2 -m "user-service (JWT)"
+
+Users Microservice - AuthorizationHeaderFilter 추가
+$ git tag  v6.3 -m "user-service (AuthorizationHeaderFilter)"
+
+
 
