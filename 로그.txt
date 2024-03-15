@@ -142,4 +142,38 @@ C:\Users\jini\git\spring_cloud1\discoveryservice\target>D:\dev\java\openjdk-17.0
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.2)
  
+
+
+==================================================
+
+section 7
+로컬에 커밋
+
+jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo
+$ ls -al
+total 5
+drwxr-xr-x 1 jini 197121   0 Mar 12 22:10 ./
+drwxr-xr-x 1 jini 197121   0 Mar 12 22:09 ../
+-rw-r--r-- 1 jini 197121 124 Mar 12 22:10 ecommerce.yml
+
+jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo
+$ git init
+Initialized empty Git repository in D:/dev/Git/git-local-repo/.git/
+
+jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo (master)
+$ ls -al
+total 9
+drwxr-xr-x 1 jini 197121   0 Mar 12 22:11 ./
+drwxr-xr-x 1 jini 197121   0 Mar 12 22:09 ../
+drwxr-xr-x 1 jini 197121   0 Mar 12 22:11 .git/
+-rw-r--r-- 1 jini 197121 124 Mar 12 22:10 ecommerce.yml
+
+jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo (master)
+$ git add ecommerce.yml
+
+jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo (master)
+$ git commit -m "upload a default application yaml file"
+[master (root-commit) b3ad658] upload a default application yaml file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 ecommerce.yml
  

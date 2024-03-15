@@ -127,4 +127,16 @@ Users Microservice - AuthorizationHeaderFilter 추가
 $ git tag  v6.3 -m "user-service (AuthorizationHeaderFilter)"
 
 
+----------------------------------------
+[section 7]
+config-service
+먼저 별도 프로젝트로 만든 후
+spring_cloud1 내부로 복사해온다
+이후 import 한다
+함께 컴파일하려면
+<module>config-service</module>
+에 넣어 준다
+
+$ git tag  v7.1 -m  "Spring Cloud Config - create project"
+
 
