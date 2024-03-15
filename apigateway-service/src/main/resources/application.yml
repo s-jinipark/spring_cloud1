@@ -50,6 +50,16 @@ spring:
             - RemoveRequestHeader=Cookie
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}   
             - AuthorizationHeaderFilter    # section 6 추가     
+        # section 7 =>
+        - id: user-service 
+          uri: lb://USER-SERVICE  
+          predicates:
+            - Path=/user-service/actuator/**
+            - Method=GET,POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}   
+        # <= section 7 
         - id: catalog-service  # [5-5] ? 정도
           uri: lb://CATALOG-SERVICE  # 유레카에 등록된 명
           predicates:
@@ -86,4 +96,11 @@ spring:
 token:  # section 6
   #expiration_time: 86400000  # 60초 * 60분 * 24 시간 * 1000 (ms)
   secret: mynameisjiniparkiliveinyonginsin
-  
+
+# section 7
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace
+      

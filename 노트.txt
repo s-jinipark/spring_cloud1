@@ -163,3 +163,10 @@ ecommerce.yml 를 변경하고
 
 $ git tag  v7.2 -m  "Users Microservice + Spring Cloud Config connect"
 
+우선순위
+    application.yml -> application-name.yml -> application-name-<profile>.yml
+
+
+$ git tag  v7.3 -m  "Spring Cloud Gateway + Spring Cloud Config connect"
+
+

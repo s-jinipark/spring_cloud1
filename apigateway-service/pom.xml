@@ -65,7 +65,23 @@
             <version>2.3.1</version>
         </dependency>
 		<!--// section 6 -->
-		
+
+        <!-- section 7 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--// section 7 -->
+        
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
