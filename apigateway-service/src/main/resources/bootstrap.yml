@@ -4,4 +4,5 @@ spring:
     config:
       uri: http://127.0.0.1:8888
       name: ecommerce
-      
+  profiles:
+    active: dev  #prod (X)  # user 서비스에 맞춘다

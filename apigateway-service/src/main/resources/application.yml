@@ -93,9 +93,10 @@ spring:
                 preLogger: true
                 postLogger: true
 
-token:  # section 6
-  #expiration_time: 86400000  # 60초 * 60분 * 24 시간 * 1000 (ms)
-  secret: mynameisjiniparkiliveinyonginsin
+#token:  # section 6
+#  #expiration_time: 86400000  # 60초 * 60분 * 24 시간 * 1000 (ms)
+#  secret: mynameisjiniparkiliveinyonginsin
+#=> section 7 관련 주석처리 한다
 
 # section 7
 management:

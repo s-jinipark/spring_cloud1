@@ -163,10 +163,30 @@ ecommerce.yml 를 변경하고
 
 $ git tag  v7.2 -m  "Users Microservice + Spring Cloud Config connect"
 
-우선순위
-    application.yml -> application-name.yml -> application-name-<profile>.yml
-
 
 $ git tag  v7.3 -m  "Spring Cloud Gateway + Spring Cloud Config connect"
 
+
+
+우선순위
+    application.yml -> application-name.yml -> application-name-<profile>.yml
+                       (예 : ecommerce.yml)     (예 : ecommerce-dev.yml)
+이번에는 profile 을 사용한 configuration 적용
+
+user-service 에는
+...
+  profiles:
+    active: dev
+    
+apigateway-service 에는
+...
+  profiles:
+    active: prod
+    
+로 설정하고 테스트 한다
+=> 이거 오류 남. invalid 하다고
+=> user 와 동일하게 apigateway 도 dev 로 맞춰준다 !
+
+
+$ git tag  v7.3 -m  "Profiles을 사용한 Configuration 적용"
 
