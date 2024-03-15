@@ -1,0 +1,7 @@
+# [section 7] 에 추가
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: ecommerce
+      

@@ -37,9 +37,17 @@ logging:
   level:
     '[com.example.userservice]': DEBUG
 
-token:
-  expiration_time: 86400000  # 60초 * 60분 * 24 시간 * 1000 (ms)
-  # secret: user_token  # 임의의 값. 토큰 만들 때 사용
-  # The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm. 
-  # 더 길게 ..
-  secret: mynameisjiniparkiliveinyonginsin
+#token:
+#  expiration_time: 86400000  # 60초 * 60분 * 24 시간 * 1000 (ms)
+#  # secret: user_token  # 임의의 값. 토큰 만들 때 사용
+#  # The specified key byte array is 128 bits which is not secure enough for any JWT HMAC-SHA algorithm. 
+#  # 더 길게 ..
+#  secret: mynameisjiniparkiliveinyonginsin
+# => [section 7] 주석으로 막는다
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
+        

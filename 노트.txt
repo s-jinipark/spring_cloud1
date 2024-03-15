@@ -139,4 +139,27 @@ spring_cloud1 내부로 복사해온다
 
 $ git tag  v7.1 -m  "Spring Cloud Config - create project"
 
+ecommerce.yml 를 변경하고
+
+커밋 한다
+
+    jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo (master)
+    $ ls
+    ecommerce.yml
+    
+    jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo (master)
+    $ git add .
+    
+    jini@DESKTOP-GKSI0P5 MINGW64 /d/dev/Git/git-local-repo (master)
+    $ git commit -m "2024 0915 1"
+    [master 68ba2c8] 2024 0915 1
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+다음으로 POSTMAN 에서 refresh 해준다 (POST 방식임)     
+     http://localhost:13178/actuator/refresh
+
+이후 설정값을 가져오는 page (health_check) => 새로고침 하면 반영되어 있음
+
+
+$ git tag  v7.2 -m  "Users Microservice + Spring Cloud Config connect"
 
