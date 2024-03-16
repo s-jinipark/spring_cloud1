@@ -8,4 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: file://D:\dev\Git\git-local-repo
+          #uri: file://D:\dev\Git\git-local-repo
+          # section 7 원격 접속
+          uri: https://github.com/s-jinipark/spring-cloud-config.git
+          
